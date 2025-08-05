@@ -1,0 +1,39 @@
+/* src/App.css */
+
+/* General Body & App Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  overflow-x: hidden; /* Prevents horizontal scroll from background text */
+}
+
+/* App container styles */
+.app {
+  position: relative;
+  text-align: center;
+  padding: 0 40px;
+}
+
+/* Background Text Styles */
+.background-text-left,
+.background-text-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 150px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05); /* Very transparent white */
+    letter-spacing: 5px;
+    z-index: 0; /* Places it behind other content */
+    user-select: none; /* Makes the text unselectable */
+}
+
+.background-text-left {
+    left: -120px;
+}
+
+.background-text-right {
+    right: -130px;
+}

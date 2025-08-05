@@ -1,0 +1,426 @@
+/* src/pages/AIInput.css */
+
+/* --- TABS --- */
+.component-tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-surface);
+  margin-top: 2rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.tab-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.tab-btn.active {
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-text-primary);
+}
+
+/* --- COMPONENT DISPLAY AREA (Holds Preview or Code) --- */
+.component-display-area {
+  position: relative;
+  border: 1px solid var(--color-surface);
+  background-color: #121212;
+  border-radius: 8px;
+  margin-top: -1px;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  z-index: 10;
+  padding: 4px;
+  border-radius: 4px;
+}
+.copy-code-btn:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+}
+
+/* --- PREVIEW STYLES --- */
+
+/* --- TABS --- */
+.component-tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-surface);
+  margin-top: 2rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.tab-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.tab-btn.active {
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-text-primary);
+}
+
+/* --- COMPONENT DISPLAY AREA (Holds Preview or Code) --- */
+.component-display-area {
+  position: relative;
+  border: 1px solid var(--color-surface);
+  background-color: #000; /* CHANGED: Make the whole area black like the image */
+  border-radius: 8px;
+  margin-top: -1px;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  z-index: 10;
+  padding: 4px;
+  border-radius: 4px;
+}
+.copy-code-btn:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+}
+
+/* --- PREVIEW STYLES (MODIFIED TO MATCH IMAGE) --- */
+.ai-input-preview-wrapper {
+  /* MODIFIED: Increased padding for more space */
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 8px;
+  min-height: 450px; /* MODIFIED: Ensures the container has a good height */
+  width: 100%; /* MODIFIED: Removed fixed width to fill the container */
+}
+
+.ai-input-container {
+  width: 100%;
+  /* MODIFIED: Made the component itself larger */
+  max-width: 650px;
+  background-color: #1c1c1c;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--color-surface);
+}
+
+.ai-textarea {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  resize: none;
+  /* MODIFIED: Increased the height of the text area */
+  height: 90px;
+  width: 100%;
+}
+.ai-textarea:focus {
+  outline: none;
+}
+.ai-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.ai-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-left-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ai-action-btn {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.ai-action-btn:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.ai-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2a2220;
+  color: #ff8a65;
+  border: 1px solid #5d3931;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ai-search-btn:hover {
+  background-color: #3e2e2a;
+  border-color: #ea580c;
+  color: #fff;
+}
+.ai-search-btn:hover svg {
+  color: #fff !important;
+}
+
+/* --- CODE BLOCK STYLES --- */
+.code-block {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 1.5rem;
+  margin: 0;
+  border-radius: 8px;
+  overflow: auto;
+  max-height: 400px;
+}
+
+/* --- COPY BUTTON STYLES (ADDED) --- */
+.copy-code-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 8px;
+}
+
+/* Style for the 'Copied!' success state */
+.copy-code-btn.copied {
+  color: #4ade80; /* A bright green for success */
+}
+
+/* src/pages/AIInput.css */
+
+/* --- TABS & GENERAL LAYOUT (No changes here) --- */
+.component-tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-surface);
+  margin-top: 2rem;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+.tab-btn:hover {
+  color: var(--color-text-primary);
+}
+.tab-btn.active {
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-text-primary);
+}
+.component-display-area {
+  position: relative;
+  background-color: #000;
+  border: 1px solid var(--color-surface);
+  border-radius: 8px;
+  margin-top: -1px;
+}
+
+/* --- PREVIEW STYLES (No changes here) --- */
+.ai-input-preview-wrapper {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 8px;
+  min-height: 450px;
+  width: 1100px;
+}
+.ai-input-container {
+  width: 100%;
+  max-width: 650px;
+  background-color: #1c1c1c;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--color-surface);
+}
+.ai-textarea {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  resize: none;
+  height: 90px;
+  width: 100%;
+}
+.ai-textarea:focus {
+  outline: none;
+}
+.ai-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+.ai-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ai-left-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ai-action-btn {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.ai-action-btn:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+.ai-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2a2220;
+  color: #ff8a65;
+  border: 1px solid #5d3931;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.ai-search-btn:hover {
+  background-color: #3e2e2a;
+  border-color: #ea580c;
+  color: #fff;
+}
+.ai-search-btn:hover svg {
+  color: #fff !important;
+}
+
+/* --- CODE BLOCK STYLES (MODIFIED) --- */
+.code-block {
+  margin: 0;
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */
+  width: 1100px;
+}
+.code-block::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+/* NEW: Styles for the Shiki container */
+.code-block pre {
+  margin: 0; /* Remove default pre margin */
+  background-color: #18181b;
+  padding: 1.5rem;
+  max-height: 300px; /* Set the max height before scroll happens */
+  overflow: auto;
+  border-radius: 8px;
+  scrollbar-width: none; /* Also hide scrollbar on the inner element */
+}
+.code-block pre::-webkit-scrollbar {
+  display: none;
+}
+.code-block pre code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  z-index: 10;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 8px;
+}
+.copy-code-btn:hover {
+  color: var(--color-text-primary);
+  background-color: #27272a; /* Darker hover background for better contrast */
+}
+.copy-code-btn.copied {
+  color: #4ade80;
+}
+
+.code-block::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* For Firefox (a bit different) */
+.code-block {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

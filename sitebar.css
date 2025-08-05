@@ -1,0 +1,70 @@
+/* --- Left Sidebar --- */
+.left-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+
+.nav-group {
+    margin-bottom: 2rem;
+}
+
+.nav-group-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fafafa; 
+    margin-bottom: 0.75rem;
+}
+
+.nav-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Spacing between nav links */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #a1a1aa; /* Default grey for links */
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background-color: #27272a; /* Add a subtle background on hover */
+}
+
+/* Style for the currently active page link */
+.nav-link.active {
+    color: #ffffff; /* Bright white for active link */
+    font-weight: 500;
+}
+
+/* --- Tag Styling (e.g., "new", "pro") --- */
+.tag {
+    padding: 2px 8px;
+    border-radius: 99px; /* Pill shape */
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.new-tag {
+    background-color: rgba(234, 88, 12, 0.15); /* Orange background with transparency */
+    color: #fb923c; /* Brighter orange text */
+    border: 1px solid rgba(234, 88, 12, 0.3);
+}
+
+.pro-tag {
+    background-color: rgba(99, 102, 241, 0.15); /* Indigo/blue background */
+    color: #818cf8; /* Lighter indigo text */
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
