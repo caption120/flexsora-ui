@@ -1,0 +1,10 @@
+{
+  "name": "theme-toggle-button",
+  "type": "component",
+  "files": [
+    {
+      "path": "components/ui/theme-toggle-button.tsx",
+      "content": "import * as React from \"react\";\nimport { useTheme } from \"next-themes\";\n\nexport default function ThemeToggleButton() {\n  const { theme, setTheme } = useTheme();\n\n  return (\n    <button\n      onClick={() => setTheme(theme === \"dark\" ? \"light\" : \"dark\")}\n      style={{\n        padding: \"8px 16px\",\n        borderRadius: \"8px\",\n        background: theme === \"dark\" ? \"#222\" : \"#eee\",\n        color: theme === \"dark\" ? \"#fff\" : \"#000\"\n      }}\n    >\n      {theme === \"dark\" ? \"🌙 Dark\" : \"☀️ Light\"}\n    </button>\n  );\n}\n"
+    }
+  ]
+}
